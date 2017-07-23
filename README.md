@@ -11,3 +11,9 @@ AWS S3
 HDFS
 And more
 
+# Project:
+Our project will consist using Python 3.6 to set up a live data streaming pipeline with Twitter using the tweepy package and Spark.
+The tag word we will use is 'Steelers', which was chosen for two reasons:
+Originally from a suburb of Pittsburgh, Pennsylvania
+The Natinal Football season is getting under way.
+
