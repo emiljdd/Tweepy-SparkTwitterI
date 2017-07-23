@@ -11,10 +11,16 @@ AWS S3
 HDFS
 And more
 
-# Project:
-Our project will consist using Python 3.6 to set up a live data streaming pipeline with Twitter using the tweepy package and Spark.
+## Project:
+This project will consist of two phases.  The first phase of our project will consist using Python 3.6 to set up a live data streaming pipeline with Twitter using the tweepy package and Spark.
 The tag word we will use is 'Steelers', which was chosen for two reasons:
 Originally from a suburb of Pittsburgh, Pennsylvania
-The Natinal Football season is getting under way.
+The National Football season is getting under way.
 
-## Data
+The second phase will be to analyze the top 10 tweets.  Once the specified number of tweets have been obtained, we will analyze each individual tweet and attempt to rank the top 10 most popular tweets using the hashtag marker.
+
+A dashboard type visualization will be the final phase, which will consist of a bar plot using the matplotlib and seaborn library. Our dashboard will up date in real time as the tweets are collected.
+
+## Data:
+The data will consist of pulling tweets from twitter that contain the tag word "Steelers' until a total of 10,000 tweets have been obtained.
+
