@@ -7,7 +7,7 @@ import json
 
 
 # Set up your credentials
-consumer_key='Obtained from Twiiter API'
+consumer_key='Obtained from Twitter API'
 consumer_secret='Obtained from Twitter API'
 access_token ='Obtained from Twitter API'
 access_secret='Obtained from Twitter API'
@@ -42,7 +42,7 @@ def sendData(c_socket):
 if __name__ == "__main__":
   s = socket.socket()         # Create a socket object
   host = "127.0.0.1"     # Get local machine name
-  port = 9997                # Reserve a port for your service.
+  port = 9995                # Reserve a port for your service.
   s.bind((host, port))        # Bind to the port
 
   print("Listening on port: %s" % str(port))
