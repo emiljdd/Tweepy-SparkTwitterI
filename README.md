@@ -22,5 +22,5 @@ The second phase will be to analyze the top 10 tweets.  Once the specified numbe
 A dashboard type visualization will be the final phase, which will consist of a bar plot using the matplotlib and seaborn library. Our dashboard will up date in real time as the tweets are collected.
 
 ## Data:
-The data will consist of pulling tweets from twitter that contain the tag word "Steelers' until a total of 10,000 tweets have been obtained.
+The data will consist of pulling tweets from twitter that contain the tag word "Steelers'.  A pseudo-dashboard will be created to display the top 10 tens, with an update every 10 seconds.
 
