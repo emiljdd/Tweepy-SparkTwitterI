@@ -7,7 +7,7 @@ It was created at the AMPLab at UC Berkeley
 You can think of Spark as a flexible alternative to MapReduce
 Spark can use data stored in a variety of formats
 Cassandra
-AWS S3
+Amaazon Web Services S3
 HDFS
 And more
 
@@ -19,7 +19,7 @@ The National Football season is getting under way.
 
 The second phase will be to analyze the top 10 tweets.  Once the specified number of tweets have been obtained, we will analyze each individual tweet and attempt to rank the top 10 most popular tweets using the hashtag marker.
 
-A dashboard type visualization will be the final phase, which will consist of a bar plot using the matplotlib and seaborn library. Our dashboard will up date in real time as the tweets are collected.
+A dashboard type visualization will be the final phase, which will consist of a bar plot using the matplotlib and seaborn library. Our dashboard will updated in real time as the tweets are collected.
 
 ## Data:
 The data will consist of pulling tweets from twitter that contain the tag word "Steelers' until a total of 10,000 tweets have been obtained.
