@@ -1,5 +1,5 @@
 # Tweepy-Spark Twitter
-Data Practicum II
+## Data Practicum II
 Spark is one of the latest technologies being used to quickly and easily handle Big Data
 It is an open source project on Apache
 It was first released in February 2013 and has increased in popularity due to it’s ease of use and speed
