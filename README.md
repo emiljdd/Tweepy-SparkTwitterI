@@ -34,8 +34,6 @@ But they are all still listed as experimental, so instead of showing you somethi
 
 Internally, it works as follows. Spark Streaming receives live input data streams and divides the data into batches, which are then processed by the Spark engine to generate the final stream of results in batches.
 
-Twitter Example
-
 ## Project:
 This project will consist of multiple phases.  The first phase of our project will consist using Python 3.6 to set up a live data streaming pipeline with Twitter using the tweepy package and Spark.
 The tag word we will use is 'Donald Trunp'.
