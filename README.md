@@ -43,7 +43,7 @@ The second phase will be to analyze the top 10 tweets.  Once the specified numbe
 
 A dashboard type visualization will be displayed, which will consist of a bar plot using the matplotlib and seaborn library. Our dashboard will be updated in real time as the tweets are collected and the top ten 'hashtag' topics will be displayed in a bar plot visualization.  Each item in the top ten list will be displayed in a different color.  The x-axis will displar the total cound and the y-axis will show the hashtag topic.
 
-The final part of the project will be to caputure a significant number of tweets (1,000+) and complete a sentiment analysis on what will be a representation of the tweets streamed.
+The final part of the project will be to caputure a significant number of tweets (2,000+) and complete a sentiment analysis on what will be a representation of the tweets streamed.
 
 ## Data:
 The data will consist of creating a pipeline to live stream tweets that contain the tagword "Donald Trump". The pipeline will continue to live stream tweets to adequately display the ten most popular.
@@ -53,14 +53,14 @@ Ultimately, the amount of tweets obtained should be around 10,000 to get a true 
 ## Preparation
 A virtual machine running Ubuntu 16.0.4 was used, along withPython 3.5.2, which comes installed on the VM machine.  Jupyter notebook was also utilized in creating python scripts.
 The following packages were used and installed via pip3:
-pyspark
-matplotlib
-seaborn
-IPython
-time
-tweepy
-socket
-json
-pandas
+pyspark,
+ matplotlib,
+ seaborn,
+ IPython,
+ time,
+ tweepy,
+ socket,
+ json,
+ pandas.
 
 In order to run the .py and .ipynb scripts, two terminal windows are needed.  
