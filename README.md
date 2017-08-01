@@ -1,4 +1,4 @@
-# Tweepy-Spark Twitter
+# Live streaming twitter data using pyspark and tweepy.
 ## Data Practicum II
 Spark is one of the latest technologies being used to quickly and easily handle Big Data
 It is an open source project on Apache
