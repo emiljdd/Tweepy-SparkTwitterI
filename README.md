@@ -50,17 +50,20 @@ The data will consist of creating a pipeline to live stream tweets that contain 
 
 Ultimately, the amount of tweets obtained should be around 10,000 to get a true sample of the most popular topics containing our tagword.
 
-## Preparation
+## Methodology
 A virtual machine running Ubuntu 16.0.4 was used, along withPython 3.5.2, which comes installed on the VM machine.  Jupyter notebook was also utilized in creating python scripts.
 The following packages were used and installed via pip3:
-pyspark,
- matplotlib,
- seaborn,
- IPython,
- time,
- tweepy,
- socket,
- json,
- pandas.
+
+### Tools and libraries
+* Python
+         * pyspark,
+         * matplotlib
+         * seaborn
+         * IPython
+         * time
+         * tweepy
+         * socket
+         * json
+         * pandas
 
 In order to run the .py and .ipynb scripts, two terminal windows are needed.  
