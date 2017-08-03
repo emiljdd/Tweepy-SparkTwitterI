@@ -57,13 +57,13 @@ The following packages were used and installed via pip3:
 ### Tools and libraries
 
 * Python
-         * pyspark - pyspark.streaming import Streaming Context
+    * pyspark - pyspark.streaming import Streaming Context
                           Main entry point for Spark Streaming functionality.
                      pyspark.sql import SQLContext 
                           Main entry point for Data Frame and SQL functionality.
                      pyspark.sql.functions import desc
                           SQL function to allow listing in descending order.
-         * matplotlib - Create a bar plot to display the top ten hash tag topics
+    * matplotlib - Create a bar plot to display the top ten hash tag topics
          * seaborn - Provides an interface with matlplotlib to create interactive graphs
          * IPython - Allows for the display of graphs in the jupyter notebook
          * time - Small, minimalistic, Python library for dealing with time conversions between universal time and arbitrary time zones
