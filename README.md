@@ -50,7 +50,7 @@ The data will consist of creating a pipeline to live stream tweets that contain 
 
 Ultimately, the amount of tweets obtained should be around 10,000 to get a true sample of the most popular topics containing our tagword.
 
-## Methodology
+## Methodology:
 A virtual machine running Ubuntu 16.0.4 was used, along withPython 3.5.2, which comes installed on the VM machine.  Jupyter notebook was also utilized in creating python scripts.
 The following packages were used and installed via pip3:
 
@@ -80,9 +80,7 @@ In order to run the .py and .ipynb scripts, two terminal windows are needed.
 
 Set up an Ubuntu VM on my local machine
 
-### Step 2
-
-Confirm Python 3 is loaded
+### Step 2: Confirm Python 3 is loaded
 
         python3
         Python 3.5.2 (default, Nov 17 2016, 17:05:23) 
@@ -90,13 +88,11 @@ Confirm Python 3 is loaded
         Type "help", "copyright", "credits" or "license" for more information.
         >>>
 
-### Step 3
-
-Load necessary packages using:
+### Step 3: Load necessary packages using:
 
          pip3 install <package_name>
          
-### Step 4
+### Step 4: TweetRead.py
 
 A .py script was created called TweetRead.  From the tweepy package we install 'OAuthHandler'Stream to handle the authorization credientials that we will enter.  Also, from tweepy we will import 'Stream' and 'StreamHandler' to allow us to log and capture tweets.
 The credentials that we obtained fromm the twitter api will also be entered and saved as objects.  
