@@ -58,13 +58,13 @@ The following packages were used and installed via pip3:
 
 * Python
          * pyspark - 
-         * matplotlib 
-         * seaborn 
-         * IPython 
-         * time
-         * tweepy
-         * socket
-         * json
-         * pandas
+         * matplotlib -
+         * seaborn -
+         * IPython -
+         * time -
+         * tweepy -
+         * socket -
+         * json -
+         * pandas -
 
 In order to run the .py and .ipynb scripts, two terminal windows are needed.  
