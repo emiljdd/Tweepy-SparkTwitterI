@@ -57,17 +57,10 @@ The following packages were used and installed via pip3:
 ### Tools and libraries
 
 * Python
-         * pyspark - Allows for the display of graphs in the jupyter notebook
-         * matplotlib - Create a bar plot to display the top ten hash tag topics
-         * seaborn - Provides an interface with matlplotlib to create interactive graphs.
-                     Aid in creating a live dashboard to update tweet popularity.
-         * IPython - pyspark.streaming import Streaming Context
-                        Main entry point for Spark Streaming functionality.
-                     pyspark.sql import SQLContext 
-                        Main entry point for Data Frame and SQL functionality.
-                     pyspark.sql.functions import desc
-                        SQL function to allow listing in descending order.
-
+         * pyspark 
+         * matplotlib 
+         * seaborn 
+         * IPython 
          * time
          * tweepy
          * socket
