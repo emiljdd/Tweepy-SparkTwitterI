@@ -126,3 +126,38 @@ We will now set some user defined functions that will be used to handle the data
             except BaseException as e:
                 print("Error on_data: %s" % str(e))
             return True
+            
+...and to handle errors that are returned:
+
+         def on_error(self, status): # If an error occurs
+             print(status)
+             return True
+             
+Next, we will create a client connection and send the tweets to the local IP address and the defined socket.  Our tag word will be defined, along with the socket.
+
+Our tag word can be edited to pull all tweets that contain it.
+
+One issue that does occur when running the program multiple times is that error may occur indicating the adress is invalid.  At this point to correct the issue, a new socket number, original socket - 1, must be entered.
+
+         def sendData(c_socket): # Send the data to client socket, setting up connection
+             auth = OAuthHandler(consumer_key, consumer_secret)
+             auth.set_access_token(access_token, access_secret)
+
+            twitter_stream = Stream(auth, TweetsListener(c_socket)) # Passes the tweets into the client socket
+            twitter_stream.filter(track=['Donald Trump'])
+
+         if __name__ == "__main__":
+             s = socket.socket()         # Create a socket object
+             host = "127.0.0.1"          # Get local machine name
+             port = 9992                 # Reserve a port for your connection service.
+             s.bind((host, port))        # Bind to the port, create tuple
+
+             print("Listening on port: %s" % str(port))
+
+             s.listen(5)                 # Now wait for client connection.
+             c, addr = s.accept()        # Establish connection with client.
+
+             print( "Received request from: " + str( addr ) )
+
+             sendData(c)
+             
