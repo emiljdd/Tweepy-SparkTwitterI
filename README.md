@@ -133,7 +133,7 @@ Next, we will create a client connection and send the tweets to the local IP add
 
 Our tag word can be edited to pull all tweets that contain it.
 
-One issue that does occur when running the program multiple times is that error may occur indicating the adress is invalid.  At this point to correct the issue, a new socket number, original socket - 1, must be entered.
+One issue that does occur when running the program multiple times is that an error may occur indicating the address is invalid.  At this point, to correct the issue, a new socket number, original socket - 1, must be entered.
 
          def sendData(c_socket): # Send the data to client socket, setting up connection
              auth = OAuthHandler(consumer_key, consumer_secret)
