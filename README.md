@@ -99,7 +99,7 @@ Load necessary packages using:
 ### Step 4
 
 A .py script was created called TweetRead.  From the tweepy package we install 'OAuthHandler'Stream to handle the authorization credientials that we will enter.  Also, from tweepy we will import 'Stream' and 'StreamHandler' to allow us to log and capture tweets.
-The credentials that we obtained fromm the twitter api will also be entered and saved as objects.  Next we create a class called tweetListener that will listen for to tweets. 
+The credentials that we obtained fromm the twitter api will also be entered and saved as objects.  
 
          from tweepy import OAuthHandler
          from tweepy import Stream
@@ -110,7 +110,19 @@ The credentials that we obtained fromm the twitter api will also be entered and 
          consumer_secret='<CONSUMER_SECRET>'
          access_token ='<ACCESS_TOKEN>'
          access_secret='<ACCESS_SECRET>'
+         
+Next we create a class called tweetListener that will listen for to tweets.
 
          class TweetsListener(StreamListener): # Create a class that will listen to tweets from Streamlistener
 
-         
+We will now set some user defined functions that will be used to handle the data:
+
+         def on_data(self, data):
+            try:
+                msg = json.loads( data ) # Create a message from json file
+                print( msg['text'].encode('utf-8') ) # Print the message and UTF-8 coding will eliminate emojis
+                self.client_socket.send( msg['text'].encode('utf-8') )
+                return True
+            except BaseException as e:
+                print("Error on_data: %s" % str(e))
+            return True
