@@ -75,3 +75,13 @@ The following packages were used and installed via pip3:
     * pandas -
 
 In order to run the .py and .ipynb scripts, two terminal windows are needed.  
+
+### Step 1
+
+Set up an Ubuntu VM on my local machine
+
+### Step 2
+
+Confirm Python 3 is loaded
+
+        python3
