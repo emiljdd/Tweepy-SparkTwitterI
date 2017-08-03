@@ -57,7 +57,7 @@ The following packages were used and installed via pip3:
 ### Tools and libraries
 
 * Python
-         * pyspark 
+         * pyspark - 
          * matplotlib 
          * seaborn 
          * IPython 
