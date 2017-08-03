@@ -106,10 +106,10 @@ The credentials that we obtained fromm the twitter api will also be entered and 
          from tweepy.streaming import StreamListener
          
          # Set up your credentials
-         consumer_key='mWAVjAgaeR4hLH6B6vk9QTXMu'
-         consumer_secret='Bv11IZOp1fOeJGu5EoHbpDje9ptVNGzPTEMvGVZiWZrby8YnC8'
-         access_token ='779132468-xl85uXLJrXbisv6XubEDqP2qhWmDb172yh6DiMNn'
-         access_secret='YWBo2lPXNEIwNgYZPdkutcj93uP6hpInDvFgwaYCyZVkY'
+         consumer_key='<CONSUMER_KEY>'
+         consumer_secret='<CONSUMER_SECRET>'
+         access_token ='<ACCESS_TOKEN>'
+         access_secret='<ACCESS_SECRET>'
 
          class TweetsListener(StreamListener): # Create a class that will listen to tweets from Streamlistener
 
