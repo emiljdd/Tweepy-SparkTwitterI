@@ -94,4 +94,23 @@ Confirm Python 3 is loaded
 
 Load necessary packages using:
 
-         pip3
+         pip3 install <package_name>
+         
+### Step 4
+
+A .py script was created called TweetRead.  From the tweepy package we install 'OAuthHandler'Stream to handle the authorization credientials that we will enter.  Also, from tweepy we will import 'Stream' and 'StreamHandler' to allow us to log and capture tweets.
+The credentials that we obtained fromm the twitter api will also be entered and saved as objects.  Next we create a class called tweetListener that will listen for to tweets. 
+
+         from tweepy import OAuthHandler
+         from tweepy import Stream
+         from tweepy.streaming import StreamListener
+         
+         # Set up your credentials
+         consumer_key='mWAVjAgaeR4hLH6B6vk9QTXMu'
+         consumer_secret='Bv11IZOp1fOeJGu5EoHbpDje9ptVNGzPTEMvGVZiWZrby8YnC8'
+         access_token ='779132468-xl85uXLJrXbisv6XubEDqP2qhWmDb172yh6DiMNn'
+         access_secret='YWBo2lPXNEIwNgYZPdkutcj93uP6hpInDvFgwaYCyZVkY'
+
+         class TweetsListener(StreamListener): # Create a class that will listen to tweets from Streamlistener
+
+         
