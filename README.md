@@ -89,3 +89,9 @@ Confirm Python 3 is loaded
         [GCC 5.4.0 20160609] on linux
         Type "help", "copyright", "credits" or "license" for more information.
         >>>
+
+### Step 3
+
+Load necessary packages using:
+
+         pip3
