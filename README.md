@@ -64,14 +64,14 @@ The following packages were used and installed via pip3:
                      pyspark.sql.functions import desc
                           SQL function to allow listing in descending order.
     * matplotlib - Create a bar plot to display the top ten hash tag topics
-         * seaborn - Provides an interface with matlplotlib to create interactive graphs
-         * IPython - Allows for the display of graphs in the jupyter notebook
-         * time - Small, minimalistic, Python library for dealing with time conversions between universal time and arbitrary time zones
-         * tweepy - Allows python to connect to the twitter API.
-         * socket - Enables a line of communication from twitter to our local machine.
-         * json - The json library can parse JSON from strings or files. The library parses JSON into a Python dictionary or list. 
-                  It can also convert Python dictionaries or lists into JSON strings.
+    * seaborn - Provides an interface with matlplotlib to create interactive graphs
+    * IPython - Allows for the display of graphs in the jupyter notebook
+    * time - Small, minimalistic, Python library for dealing with time conversions between universal time and arbitrary time zones
+    * tweepy - Allows python to connect to the twitter API.
+    * socket - Enables a line of communication from twitter to our local machine.
+    * json - The json library can parse JSON from strings or files. The library parses JSON into a Python dictionary or list. 
+             It can also convert Python dictionaries or lists into JSON strings.
 
-         * pandas -
+    * pandas -
 
 In order to run the .py and .ipynb scripts, two terminal windows are needed.  
