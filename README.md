@@ -159,5 +159,13 @@ One issue that does occur when running the program multiple times is that an err
 
              sendData(c)
              
-### Step 5
+At this point we have completed out authentication and connection script to Twitter and named our tweet tag word using tweepy.  
+
+## PYSPARK
+
+### Step 1
+
+We must first load the necessary parts of pyspark that will allow us to create a SparkContext, which is the initial state to allow Spark functionality.
+Along with that we will iniate Spark Streaming, which will allow us to collect live streaming data.  Finally, we will initiate pyspark.sql to allow sequel like queries when we are retrieving the tweets for visualization.
+
 
