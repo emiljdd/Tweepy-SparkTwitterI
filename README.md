@@ -94,6 +94,7 @@ Ubuntu version 16.0.4 was created.
 
          pip3 install <package_name>
          
+## TWEETREAD.PY         
 ### Step 4: TweetRead.py
 
 A .py script was created called TweetRead.  From the tweepy package we install 'OAuthHandler'Stream to handle the authorization credientials that we will enter.  Also, from tweepy we will import 'Stream' and 'StreamHandler' to allow us to log and capture tweets.
