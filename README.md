@@ -77,6 +77,7 @@ The following packages were used and installed via pip3:
 
 In order to run the .py and .ipynb scripts, two terminal windows are needed.  
 
+# PHASE I
 ### Step 1
 
 Set up an Ubuntu VM on my local machine.
@@ -162,6 +163,7 @@ One issue that does occur when running the program multiple times is that an err
              
 At this point we have completed out authentication and connection script to Twitter and named our tweet tag word using tweepy.  
 
+# PHASE II
 ## PYSPARK
 
 ### Step 1
@@ -250,4 +252,4 @@ The next graph clear the previous, if one exists and will set the display parame
                      sns.plt.show()
                      count = count + 1
                      
-                     
+# PHASE III                     
