@@ -165,6 +165,13 @@ At this point we have completed out authentication and connection script to Twit
 
 ### Step 1
 
+Let's open another terminal window and start our jupyter notebook to create the following script.
+We will initiate the findspark script to locate pyspark from our original directory that it was downloaded too.
+
+               import findspark
+               findspark.init('/home/myspark/spark-2.1.0-bin-hadoop2.7')
+               import pyspark
+               
 We must first load the necessary parts of pyspark that will allow us to create a SparkContext, which is the initial state to allow Spark functionality.
 Along with that we will iniate Spark Streaming, which will allow us to collect live streaming data.  Finally, we will initiate pyspark.sql to allow SQL queries when we are retrieving the tweets for visualization.
 
@@ -172,4 +179,74 @@ Along with that we will iniate Spark Streaming, which will allow us to collect l
                from pyspark.streaming import StreamingContext
                from pyspark.sql import SQLContext
                from pyspark.sql.functions import desc
+               
+### Step 2
 
+Initiate the SparkContext funtionality.  When doing so, we can only initiate once or we must restart our kernel to do so a second time.
+
+               sc = SparkContext()
+               
+### Step 3
+
+The SparkStreaming object will be created and we will set the update argument to 10 seconds.  This translate to our bar plot being updated every 10 seconds.
+Our SQLContext object will be created with the using the argument (sc).  This will allow for SQL queries on the data.
+A socketStream object will be created using our local IP address and the socket we used in the TweetRead.py script.  Make sure these variables are the same in both scripts.
+
+               ssc = StreamingContext(sc, 10 )
+               sqlContext = SQLContext(sc)
+               
+               socket_stream = ssc.socketTextStream("127.0.0.1", 9991)
+               
+### Step 4
+
+Create a tuple that will be made into a list, check for hashtags, sets everything to lowercase, reduces by the predetermined key, stores the object as a tweet object, stores the tweets in descending order (since we are gioing to retrieve the top ten tweets) and registers every ten tweets to a table for later referencing.
+            
+               ( lines.flatMap( lambda text: text.split( " " ) ) 
+                  .filter( lambda word: word.lower().startswith("#") ) 
+                  .map( lambda word: ( word.lower(), 1 ) ) 
+                  .reduceByKey( lambda a, b: a + b ) 
+                  .map( lambda rec: Tweet( rec[0], rec[1] ) ) 
+                  .foreachRDD( lambda rdd: rdd.toDF().sort( desc("count")                 
+                  .limit(10).registerTempTable("tweets") ) ) 
+
+### Step 5
+
+At this point open a second terminal window and go the directory that contains the TweetRead.py file and type:
+
+                  python3 TweetRead.py > tweet_data.txt
+
+This will start listening on the defined port and output the collected tweets to a text file called tweet_data.txt.
+Once TweetRead.py is started enter the next command in the Jupyter notebook to start the SparkContext session.
+
+                  ssc.start() 
+                  
+At this point tweets are being read and collected into the output file .
+
+### Step 6
+
+Here we will enable the ability to display the visualization in the jupyter notebook and will only work for the jupyter notebook.
+               
+                  import time
+                  from IPython import display # Enables us to show stuff in the notebook
+                  import matplotlib.pyplot as plt #Visualization library
+                  import seaborn as sns # Visualization library
+                  %matplotlib inline
+                  
+ ### Step 7
+ 
+Here we will set the time to 3 seconds before we get are first update.  The top ten tweets object will be created using sql.context and a dataframe will be created using pandas.
+The next graph clear the previous, if one exists and will set the display parameters using seaborn, which will include our x and y axis, and finally display the graph.
+
+                  count = 0
+                  while count < 10:
+    
+                     time.sleep( 3 )
+                     top_10_tweets = sqlContext.sql( 'Select tag, count from tweets' )
+                     top_10_df = top_10_tweets.toPandas() # Dataframe library
+                     display.clear_output(wait=True) #Clears the output, if a plot exists.
+                     sns.plt.figure( figsize = ( 10, 8 ) )
+                     sns.barplot( x="count", y="tag", data=top_10_df)
+                     sns.plt.show()
+                     count = count + 1
+                     
+                     
