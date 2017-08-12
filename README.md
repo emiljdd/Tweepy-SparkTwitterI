@@ -43,7 +43,7 @@ The second phase will be to analyze the top 10 tweets.  Once the specified numbe
 
 A dashboard type visualization will be displayed, which will consist of a bar plot using the matplotlib and seaborn library. Our dashboard will be updated in real time as the tweets are collected and the top ten 'hashtag' topics will be displayed in a bar plot visualization.  Each item in the top ten list will be displayed in a different color.  The x-axis will displar the total cound and the y-axis will show the hashtag topic.
 
-The final part of the project will be to caputure a significant number of tweets (2,000+) and complete a sentiment analysis on what will be a representation of the tweets streamed.
+The final part of the project will be to caputure a significant number of tweets (2,000+) and complete a sentiment analysis, which will include the polarity and subjectivity of the tweet using the TextBlob package
 
 ## Data:
 The data will consist of creating a pipeline to live stream tweets that contain the tagword "Donald Trump". The pipeline will continue to live stream tweets to adequately display the ten most popular.
@@ -73,12 +73,14 @@ The following packages were used and installed via pip3:
              It can also convert Python dictionaries or lists into JSON strings.
 
     * pandas -
+    * textblob - Sentiment analysis
 
 In order to run the .py and .ipynb scripts, two terminal windows are needed.  
 
 ### Step 1
 
-Set up an Ubuntu VM on my local machine
+Set up an Ubuntu VM on my local machine.
+Ubuntu version 16.0.4 was created.
 
 ### Step 2: Confirm Python 3 is loaded
 
@@ -133,7 +135,7 @@ Next, we will create a client connection and send the tweets to the local IP add
 
 Our tag word can be edited to pull all tweets that contain it.
 
-One issue that does occur when running the program multiple times is that an error may occur indicating the address is invalid.  At this point, to correct the issue, a new socket number, original socket - 1, must be entered.
+One issue that does occur when running the program multiple times is that an error may occur indicating the 'address is invalid' or 'socket in use'.  At this point, to correct the issue, a new socket number = original socket - 1, must be entered.
 
          def sendData(c_socket): # Send the data to client socket, setting up connection
              auth = OAuthHandler(consumer_key, consumer_secret)
