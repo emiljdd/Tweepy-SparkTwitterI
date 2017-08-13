@@ -289,3 +289,16 @@ With the data cleaned and ready for sentiment analysis using textblob the follow
 The above code borrowed from https://stackoverflow.com/questions/35559199/textblob-sentiment-analysis-on-a-csv-file with some modifcation and syntax error corrections.                        
 
 We now have a file that contains our tweet data along a polarity and subjectivity score attached to each.                    
+
+https://user-images.githubusercontent.com/7649609/29252892-f677c2c0-802c-11e7-91e0-f4fa18434dea.png
+
+# Conclusion
+
+Sources:
+
+http://docs.tweepy.org/en/v3.5.0/auth_tutorial.html
+http://textblob.readthedocs.io/en/dev/quickstart.html#sentiment
+http://www.geeksforgeeks.org/twitter-sentiment-analysis-using-python/
+http://tech.thejoestory.com/2015/01/python-textblob-sentiment-analysis.html
+http://www.awesomestats.in/
+https://stackoverflow.com/questions/35559199/textblob-sentiment-analysis-on-a-csv-file
