@@ -260,13 +260,15 @@ The output data collected was imported into Microsoft Excel for data cleaning.
 The collected tweets contained various marker strings that needed to be removed befor we could run the sentiment analyzer.
 This was accomplished by using the 'Find and Replace' function in Excel.  
 
-Examples of what needed to be removed are:
+Examples of what is will be removed and a screenshot link are listed below.
 
          *  'b', which was at the beginning of each tweet.
          *  RT, which stood for retweeted was removed.
          *  Removal of the @ sign from each tweet.
          *  http and https, along with any url address that started with '://'.
          * or any other '/' followed by text.
-![Screenshot](screenshot.png)
+
+https://user-images.githubusercontent.com/7649609/29252625-fd9a728c-8027-11e7-8cb8-e70c1fe4d3af.png
             
+Once the tweet data file is cleaned it looks like the following:
 
