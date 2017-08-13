@@ -25,15 +25,14 @@ But they are all still listed as experimental, so instead of showing you somethi
 Internally, it works as follows. Spark Streaming collects current input data streams and partitions the data into parcels, which are then prepared by the Spark engine to generate the final flow of results in batches.
 
 ## Project:
-This project will consist of multiple phases.  The first phase of our project will consist using Python 3.6 to set up a live data streaming pipeline with Twitter using the tweepy package and Spark.
-The tag word we will use is 'Donald Trunp'.
+This project will consist of three phases.  The first phase of our project will consist using Python 3.6 to set up a live data streaming pipeline with Twitter using the tweepy package and Spark.The tag word we will use is 'Donald Trunp'.
 Our President is on the news a lot and it would be interesting to see what hashtag topics are be attached to tweets that contain his name
 
 The second phase will be to analyze the top 10 tweets.  Once the specified number of tweets have been obtained, we will analyze each individual tweet and attempt to rank the top 10 most popular tweets using the hashtag marker.
 
 A dashboard type visualization will be displayed, which will consist of a bar plot using the matplotlib and seaborn library. Our dashboard will be updated in real time as the tweets are collected and the top ten 'hashtag' topics will be displayed in a bar plot visualization.  Each item in the top ten list will be displayed in a different color.  The x-axis will displar the total cound and the y-axis will show the hashtag topic.
 
-The final part of the project will be to caputure a significant number of tweets (2,000+) and complete a sentiment analysis, which will include the polarity and subjectivity of the tweet using the TextBlob package
+The thir and final phase of the project will be to caputure a significant number of tweets (2,000+) and complete a sentiment analysis, which will include the polarity and subjectivity of the tweet using the TextBlob package
 
 ## Data:
 The data will consist of creating a pipeline to live stream tweets that contain the tagword "Donald Trump". The pipeline will continue to live stream tweets to adequately display the ten most popular.
@@ -249,9 +248,9 @@ Cleaning the tweet data was done so using Microsoft Excel.  Hashtags (#), http(s
 
 The sentiment analysis displayed:
              
-    * Polarity - a measure of the negativity, the neutralness, or the positivity of the text
-    * Subjectivity - value from 0 to 1 measuring the subjectivness of the text. 0 is objective, 1 is subjective
-    * Classification - either pos or neg indicating if the text is positive or negative
-    * P_Pos - a measure of how positive the text is
-    * P_Neg - a measure of how negative the text is
+     * Polarity - a measure of the negativity, the neutralness, or the positivity of the text
+     * Subjectivity - value from 0 to 1 measuring the subjectivness of the text. 0 is objective, 1 is subjective
+     * Classification - either pos or neg indicating if the text is positive or negative
+     * P_Pos - a measure of how positive the text is
+     * P_Neg - a measure of how negative the text is
 
