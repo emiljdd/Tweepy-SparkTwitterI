@@ -265,6 +265,6 @@ Examples of what needed to be removed are:
          *  Removal of the @ sign from each tweet.
          *  http and https, along with any url address that started with '://'.
          * or any other '/' followed by text.
-![Screenshot](tweet-data2.png.)
+![tweet_data2](tweet-data2.png.)
             
 
