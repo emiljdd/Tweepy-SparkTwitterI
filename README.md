@@ -203,7 +203,7 @@ Create a tuple that will be made into a list, check for hashtags, sets everythin
 
 At this point open a second terminal window and go the directory that contains the TweetRead.py file and type:
 
-                  python3 TweetRead.py > tweet_data.txt
+                  python3 TweetRead.py > tweet_data2.txt
 
 This will start listening on the defined port and output the collected tweets to a text file called tweet_data.txt.
 Once TweetRead.py is started enter the next command in the Jupyter notebook to start the SparkContext session.
