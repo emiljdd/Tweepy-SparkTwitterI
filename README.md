@@ -265,7 +265,7 @@ Examples of what is will be removed and a screenshot link are listed below.
          *  RT, which stood for retweeted was removed.
          *  Removal of the @ sign from each tweet.
          *  http and https, along with any url address that started with '://'.
-         * or any other '/' followed by text.
+         *  Or any other '/' followed by text.
 
 https://user-images.githubusercontent.com/7649609/29252625-fd9a728c-8027-11e7-8cb8-e70c1fe4d3af.png
             
