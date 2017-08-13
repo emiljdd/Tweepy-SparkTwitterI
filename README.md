@@ -294,11 +294,19 @@ https://user-images.githubusercontent.com/7649609/29252892-f677c2c0-802c-11e7-91
 
 # Conclusion
 
+Sentiment analysis is quite interesting and if time allowed, further analysis would have been included.  Future anaylise would be to include a regression model try and understand what, if any, relationship exists between:
+           * Tweets and geographic location.
+           * Which tweets, negative or positive, occur at which time of day?
+          
+The project was an evolution in learning for me, which allowed me understand the live streaming process and the powerful tools that are available to do so, along with gaining knowledge of the textblob package.
+Thank you for your time and patience!
+           
+
 Sources:
 
-http://docs.tweepy.org/en/v3.5.0/auth_tutorial.html
-http://textblob.readthedocs.io/en/dev/quickstart.html#sentiment
-http://www.geeksforgeeks.org/twitter-sentiment-analysis-using-python/
-http://tech.thejoestory.com/2015/01/python-textblob-sentiment-analysis.html
-http://www.awesomestats.in/
-https://stackoverflow.com/questions/35559199/textblob-sentiment-analysis-on-a-csv-file
+           *   http://docs.tweepy.org/en/v3.5.0/auth_tutorial.html
+           *   http://textblob.readthedocs.io/en/dev/quickstart.html#sentiment
+           *   http://www.geeksforgeeks.org/twitter-sentiment-analysis-using-python/
+           *   http://tech.thejoestory.com/2015/01/python-textblob-sentiment-analysis.html
+           *   http://www.awesomestats.in/
+           *   https://stackoverflow.com/questions/35559199/textblob-sentiment-analysis-on-a-csv-file
