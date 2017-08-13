@@ -260,9 +260,25 @@ This was accomplished by using the 'Find and Replace' function in Excel.
 
 Examples of what needed to be removed are:
 
-         *  'b, which was at the beginning of each tweet.
+         *  'b', which was at the beginning of each tweet.
          *  RT, which stood for retweeted was removed.
          *  Removal of the @ sign from each tweet.
          *  http and https, along with any url address that started with ://
       
-
+b'"global warming isn\'t real" -Donald Trump https://t.co/fxbMJcqSd1'
+b"RT @Im_TheAntiTrump: Trump's 1st rape charge was by ex-wife Ivana &amp; was settled as part of the divorce settlement.\xe2\x80\xa6 "
+b"RT @Im_TheAntiTrump: #TrumpPedoGate #TrumpRape\n\nKatie's New York court filing of June 20, 2016. https://t.co/95pPmxyfeW"
+b'RT @AG_Conservative: Straight \xf0\x9f\x94\xa5 from @KevinNR:\n\nDeath Of A F***ing Salesman\n\nhttps://t.co/zsGFn7GIW6 https://t.co/rCbTAWRUDU'
+b"RT @piersmorgan: Today, @jk_rowling posted 8 hateful tweets about Donald Trump 'snubbing' a disabled boy. \nShe lied. \nhttps://t.co/Mk60NPfo\xe2\x80\xa6"
+b'RT @richarddeitsch: I believe this more today than I did on Nov. 7. https://t.co/b3jEEOL7tq'
+b'Donald J. Trump on Twitter https://t.co/8nNo6puJv1'
+b"RT @Newsweek: Donald Trump\xe2\x80\x99s approval rating is nearly 30 points worse than Bill Clinton's during the Lewinsky scandal\xe2\x80\xa6 "
+b'RT @Impeach_D_Trump: Donald Trump is "a weak person\'s idea of what a strong person is."'
+b'RT @TheScotsman: Piers Morgan calls JK Rowling \xe2\x80\x98lying hypocrite\xe2\x80\x99 over Donald Trump tweets\n\nhttps://t.co/sbIUmD1O2e https://t.co/JG6TGsOXl9'
+b"The @KevinNR piece on @realDonaldTrump is the king of dressings down. It's drop the mic, rap-battle savage. #fdt https://t.co/kXlKjZO2pr"
+b'Donald Trump Has Parted Ways With A Shocking Number Of Senior Officials - HuffPost https://t.co/8vXXbxpJ23'
+b"RT @NancySinatra: 35 psychiatrists just met at Yale to warn Donald Trump has a 'dangerous mental illness' https://t.co/3CqEUwdcpU"
+b'https://t.co/5BNqYxb9Kd'
+b'RT @Im_TheAntiTrump: #TrumpPedoGate #TrumpRape\n\nAn article on Epstein &amp; Trump connections: https://t.co/0kkrp0LXFw'
+b"RT @SicSempRises: National Review and Donald Trump Can't Close Deal both just trended 1st for about 30 minutes with half the tweets o\xe2\x80\xa6 "
+b"35 psychiatrists just met at Yale to warn Donald Trump has a 'dangerous mental illness' 
