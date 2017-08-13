@@ -1,12 +1,10 @@
 # Live streaming twitter data, including sentiment analysis using tweepy, pyspark, and textblob.
 ## Data Practicum II
-Spark is one of the latest technologies being used to quickly and easily handle Big Data. It is an open source project on Apache. It was first released in February 2013 and has increased in popularity due to its ease of use and speed.  Created at the AMPLab at UC Berkeley and is a flexible alternative to MapReduce Spark that can use data stored in a variety of formats Cassandra Amazon Web Services S3 HDFS And more Introduction to Spark Streaming
+Spark is one of the latest technologies being used to quickly and easily handle Big Data. It is an open source project on Apache. It was first released in February 2013 and has increased in popularity due to its ease of use and speed.  Created at the AMPLab at UC Berkeley and is a flexible alternative to MapReduce Spark that can use data stored in a various formats such as: Cassandra, Amazon Web Services, S3, HDFS, and more.
 
-Spark has pretty well known Streaming Capabilities, and then you are probably familiar with some of these concepts already, in which case you may find it more useful to jump straight to the official documentation here:
+Spark is well known Streaming Capabilities and if you are probably familiar with some of these concepts already, you may find it more useful to jump straight to the official documentation here:
 
 http://spark.apache.org/docs/latest/streaming-programming-guide.html#spark-streaming-programming-guide
-
-It is an excellent guide, but keep in mind some of the features are restricted to Scala at this time (Spark 2.1). Hopefully, they will be expanded to the Python API in the future!
 
 For those of you new to Spark Streaming, let's get started with a classic example, streaming Twitter! Twitter is a great source for streaming because it's something most people already have an intuitive understanding of, you can visit the site yourself, and a lot of streaming technology has come out of Twitter as a company. You don't access to the entire "firehose" of Twitter without paying for it, but that would be a lot to handle anyway, so we'll be more than fine with the freely available API access.
 
@@ -20,7 +18,7 @@ There are SparkSQL modules for streaming:
 
 http://spark.apache.org/docs/latest/api/python/pyspark.sql.html?highlight=streaming#module-pyspark.sql.streaming
 
-But they are all still listed as experimental, so instead of showing you something that might break in the future, we'll stick to the RDD methods (which is what the documentation also currently shows for streaming).
+As of this project they are all still listed as experimental, so instead of showing you something that might break in the future, I'll stick to the better known RDD methods (which is what the documentation also currently shows for streaming).
 
 Internally, it works as follows. Spark Streaming collects current input data streams and partitions the data into parcels, which are then prepared by the Spark engine to generate the final flow of results in batches.
 
@@ -32,7 +30,7 @@ The second phase will be to analyze the top 10 tweets.  Once the specified numbe
 
 A dashboard type visualization will be displayed, which will consist of a bar plot using the matplotlib and seaborn library. Our dashboard will be updated in real time as the tweets are collected and the top ten 'hashtag' topics will be displayed in a bar plot visualization.  Each item in the top ten list will be displayed in a different color.  The x-axis will displar the total cound and the y-axis will show the hashtag topic.
 
-The thir and final phase of the project will be to caputure a significant number of tweets (2,000+) and complete a sentiment analysis, which will include the polarity and subjectivity of the tweet using the TextBlob package
+The third and final phase of the project will be to caputure a significant number of tweets (2,000+) and complete a sentiment analysis, which will include the polarity and subjectivity of the tweet using the TextBlob package
 
 ## Data:
 The data will consist of creating a pipeline to live stream tweets that contain the tagword "Donald Trump". The pipeline will continue to live stream tweets to adequately display the ten most popular.
@@ -244,6 +242,7 @@ The next graph clear the previous, if one exists and will set the display parame
 https://user-images.githubusercontent.com/7649609/29252628-0be38f4a-8028-11e7-893c-7854a24e12e3.png                     
                      
 # PHASE III                     
+### Step 1
 
 Our final phase of the project will be to run a sentiment analysis on the output file we created that holds all of our tweets.
 Cleaning the tweet data was done so using Microsoft Excel.  Hashtags (#), http(s) address' were removed.  Any Retweeted(RT) indicator was removed from, along with any duplicated tweets.  Another point of contention was making sure blank rows were removed as this proved to be troublesome with 'IndexOutofRange' errors.
@@ -272,3 +271,21 @@ https://user-images.githubusercontent.com/7649609/29252625-fd9a728c-8027-11e7-8c
             
 Once the tweet data file is cleaned it looks like the following:
 
+https://user-images.githubusercontent.com/7649609/29252722-9cd6186e-8029-11e7-8406-2a01c1841dfd.png
+
+With the data cleaned and ready for sentiment analysis using textblob the following script will be run from the jupyter notebook:
+
+                  import csv
+                  from textblob import TextBlob
+                  tweetdata = '/home/myspark/tweet_data2.csv'
+                  with open(tweetdata, 'r') as csvfile:
+                     rows = csv.reader(csvfile)
+                     for row in rows:
+                        sentence = row[0]
+                        blob = TextBlob(sentence)
+                        print (sentence)
+                        print (blob.sentiment.polarity, blob.sentiment.subjectivity)
+                        
+The above code borrowed from https://stackoverflow.com/questions/35559199/textblob-sentiment-analysis-on-a-csv-file with some modifcation and syntax error corrections.                        
+
+We now have a file that contains our tweet data along a polarity and subjectivity score attached to each.                    
