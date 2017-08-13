@@ -241,6 +241,8 @@ The next graph clear the previous, if one exists and will set the display parame
                      sns.plt.show()
                      count = count + 1
                      
+https://user-images.githubusercontent.com/7649609/29252628-0be38f4a-8028-11e7-893c-7854a24e12e3.png                     
+                     
 # PHASE III                     
 
 Our final phase of the project will be to run a sentiment analysis on the output file we created that holds all of our tweets.
