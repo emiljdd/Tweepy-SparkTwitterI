@@ -247,13 +247,17 @@ https://user-images.githubusercontent.com/7649609/29252628-0be38f4a-8028-11e7-89
 Our final phase of the project will be to run a sentiment analysis on the output file we created that holds all of our tweets.
 Cleaning the tweet data was done so using Microsoft Excel.  Hashtags (#), http(s) address' were removed.  Any Retweeted(RT) indicator was removed from, along with any duplicated tweets.  Another point of contention was making sure blank rows were removed as this proved to be troublesome with 'IndexOutofRange' errors.
 
-Our sentiment analysis will display:
-             
-     * Polarity - a measure of the negativity, the neutralness, or the positivity of the text
-     * Subjectivity - value from 0 to 1 measuring the subjectivness of the text. 0 is objective, 1 is subjective
-     * Classification - either pos or neg indicating if the text is positive or negative
-     * P_Pos - a measure of how positive the text is
-     * P_Neg - a measure of how negative the text is
+Our sentiment analysis will display
+
+    Polarity - a measure of the negativity, the neutralness, or the positivity of the text
+    Classification - either pos or neg indicating if the text is positive or negative
+
+To calculate the overall sentiment, we look at the polarity score:
+
+    Positive – from .01 to 1
+    Neutral – 0
+    Negative – from –.01 to -1
+
      
 The output data collected was imported into Microsoft Excel for data cleaning.
 The collected tweets contained various marker strings that needed to be removed befor we could run the sentiment analyzer.
