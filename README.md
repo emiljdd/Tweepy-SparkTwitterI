@@ -296,6 +296,24 @@ We now have a file that contains our tweet data along a polarity and subjectivit
 
 https://user-images.githubusercontent.com/7649609/29252892-f677c2c0-802c-11e7-91e0-f4fa18434dea.png
 
+# PHASE IV
+## Naive Bayes
+The textblob package will be used once again for our text classification. Textblob will allow us to incorporate a naive bayes classifier very simply and efficiently.
+Since we have our data set cleaned and labled all we have to do is split the data into train and test sets using a 70/30 split.
+                     
+                     import pandas as pd
+                     import numpy as np
+                     df = pd.read_csv('tweetdata4.csv')
+                     df['split'] = np.random.randn(df.shape[0], 1       
+                     msk = np.random.rand(len(df)) <= 0.7
+                     train = df[msk]
+                     test = df[~msk]
+                     
+ Once we have our train and test sets we can implement the code provided at:http://textblob.readthedocs.io/en/dev/classifiers.html
+                     
+ We obtained an .7873 accuracy rate with a very simple classification piece of code that was provided for us.
+ Not bad!!  With a little more tweaking and using a more powerful natural language classification algorithm we could probably obtain a very respectable accuracy rate.
+
 # Conclusion
 
 Sentiment analysis is quite interesting and if time allowed, further analysis would have been included.  Future anaylise would be to include a regression model try and understand what, if any, relationship exists between:
