@@ -310,6 +310,7 @@ Since we have our data set cleaned and labled all we have to do is split the dat
                      test = df[~msk]
                      
  Once we have our train and test sets we can implement the code provided at:
+ 
  http://textblob.readthedocs.io/en/dev/classifiers.html
                      
  We obtained an .7873 accuracy rate with a very simple classification piece of code that was provided for us.
