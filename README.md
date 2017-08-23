@@ -316,7 +316,7 @@ Since we have our data set cleaned and labled all we have to do is split the dat
                      from textblob.classifiers import NaiveBayesClassifier
                      cl = NaiveBayesClassifier(train)
                      
-                     cl.accurcy(test) 
+                     cl.accuracy(test) 
                      
  We obtained an .7873 accuracy rate with a very simple classification piece of code that was provided for us.
  Not bad!!  With a little more tweaking and using a more powerful natural language classification algorithm we could probably obtain a very respectable accuracy rate.
