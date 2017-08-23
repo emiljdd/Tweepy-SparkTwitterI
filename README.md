@@ -305,9 +305,9 @@ Since we have our data set cleaned and labled all we have to do is split the dat
                      import numpy as np
                      df = pd.read_csv('tweetdata4.csv')
                      df['split'] = np.random.randn(df.shape[0], 1       
-                     msk = np.random.rand(len(df)) <= 0.7
-                     train = df[msk]
-                     test = df[~msk]
+                     rs = np.random.rand(len(df)) <= 0.7
+                     train = df[rs]
+                     test = df[~rs]
                      
  Once we have our train and test sets we can implement the code provided at:
  
