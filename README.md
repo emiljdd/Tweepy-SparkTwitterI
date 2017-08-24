@@ -270,6 +270,7 @@ Examples of what is will be removed and a screenshot link are listed below.
          *  Removal of the @ sign from each tweet.
          *  http and https, along with any url address that started with '://'.
          *  Or any other '/' followed by text.
+         *  Remove all punctuation
 
 https://user-images.githubusercontent.com/7649609/29252625-fd9a728c-8027-11e7-8cb8-e70c1fe4d3af.png
             
