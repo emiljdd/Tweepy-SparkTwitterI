@@ -311,7 +311,7 @@ Since we have our data set cleaned and labled all we have to do is split the dat
                      test = df[~rs]
                      
  Once we have our train and test sets we can implement the code provided at:
- 
+
  http://textblob.readthedocs.io/en/dev/classifiers.html
  
                      from textblob.classifiers import NaiveBayesClassifier
@@ -319,7 +319,16 @@ Since we have our data set cleaned and labled all we have to do is split the dat
                      
                      cl.accuracy(test) 
                      
- We obtained an .7873 accuracy rate with a very simple classification piece of code that was provided for us.
+ We obtained an .67 accuracy rate with a very simple classification piece of code that was provided for us.
+ Getting the top 5 most relevant words is relatively simple:
+
+                     cl.show_informative_features(5)
+
+Here we can see the words is and Great occur five times more in positive tweets than negative.
+
+Here we can see that the words is and Great five times more in positive tweets than negative tweets.
+
+ 
  Not bad!!  With a little more tweaking and using a more powerful natural language classification algorithm we could probably obtain a very respectable accuracy rate.
 
 # Conclusion
