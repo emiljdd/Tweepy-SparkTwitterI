@@ -323,6 +323,7 @@ Since we have our data set cleaned and labled all we have to do is split the dat
  Getting the top 5 most relevant words is relatively simple:
 
                      cl.show_informative_features(5)
+https://user-images.githubusercontent.com/7649609/29696255-e46dbffe-8904-11e7-9d55-cfc472c7bd02.png
 
 Here we can see the words is and Great occur five times more in positive tweets than negative.
 
