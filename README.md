@@ -325,16 +325,14 @@ Since we have our data set cleaned and labled all we have to do is split the dat
                      cl.show_informative_features(5)
 https://user-images.githubusercontent.com/7649609/29696424-2cd8f9a6-8906-11e7-9d9e-994bb0aba64d.png
 
-Here we can see the words is and Great occur five times more in positive tweets than negative.
+Here we can see the words 'is' and 'Great' occur five times more in positive tweets than negative.
 
-Here we can see that the words is and Great five times more in positive tweets than negative tweets.
-
- 
- Not bad!!  With a little more tweaking and using a more powerful natural language classification algorithm we could probably obtain a very respectable accuracy rate.
+Not bad!!  With a little more tweaking and using a more powerful natural language classification algorithm we could probably obtain a very respectable accuracy rate.
 
 # Conclusion
 
 Sentiment analysis is quite interesting and if time allowed, further analysis would have been included.  Future anaylise would be to include a regression model try and understand what, if any, relationship exists between:
+
            * Tweets and geographic location.
            * Which tweets, negative or positive, occur at which time of day?
           
