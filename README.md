@@ -23,14 +23,11 @@ As of this project they are all still listed as experimental, so instead of show
 Internally, it works as follows. Spark Streaming collects current input data streams and partitions the data into parcels, which are then prepared by the Spark engine to generate the final flow of results in batches.
 
 ## Project:
-This project will consist of three phases.  The first phase of our project will consist using Python 3.6 to set up a live data streaming pipeline with Twitter using the tweepy package and Spark.The tag word we will use is 'Donald Trunp'.
-Our President is on the news a lot and it would be interesting to see what hashtag topics are be attached to tweets that contain his name
-
-The second phase will be to analyze the top 10 tweets.  Once the specified number of tweets have been obtained, we will analyze each individual tweet and attempt to rank the top 10 most popular tweets using the hashtag marker.
-
-A dashboard type visualization will be displayed, which will consist of a bar plot using the matplotlib and seaborn library. Our dashboard will be updated in real time as the tweets are collected and the top ten 'hashtag' topics will be displayed in a bar plot visualization.  Each item in the top ten list will be displayed in a different color.  The x-axis will displar the total cound and the y-axis will show the hashtag topic.
-
-The third and final phase of the project will be to caputure a significant number of tweets (2,000+) and complete a sentiment analysis, which will include the polarity and subjectivity of the tweet using the TextBlob package
+This project will consist of multiple phases. The first phase of our project will be using Python 3.6 to set up a live data streaming pipeline with Twitter using the tweepy package and Spark using the pyspark library. The tag word we will use is 'Donald Trump'. Our President is on the news a lot and it would be interesting to see what hash tag topics are be attached to tweets that contain his name
+The second phase will be to analyze the top 10 tweets. Once a specified number of tweets (2,000+, approx. 10 minutes) have been obtained, we will analyze each individual tweet and will then rank the top 10 most popular hash tag topics using the hash tag marker.
+A dashboard will be displayed, which will consist of a bar plot using the matplotlib and seaborn library. Our dashboard will be updated in real time as the tweets are collected and the top ten 'hash tag' topics will be displayed in a bar plot. Each item in the top ten list will be displayed in a different color. The x-axis will display the total count and the y-axis will show the hash tag topic.
+The third part of the project will be to capture a significant number of tweets (2,000+) and complete a sentiment analysis that will include a polarity and subjectivity score using thr python package textblob.  
+The final phase will be to implement the machine learning algorithm, Naïve Bayes,  to see how well we can classify unseen tweets correctly. 
 
 ## Data:
 The data will consist of creating a pipeline to live stream tweets that contain the tagword "Donald Trump". The pipeline will continue to live stream tweets to adequately display the ten most popular.
