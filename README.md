@@ -37,7 +37,7 @@ The final phase will be to implement the machine learning algorithm, Naïve Baye
 ## Data:
 The data will consist of creating a pipeline to live stream tweets that contain the tagword "Donald Trump". The pipeline will continue to live stream tweets to adequately display the ten most popular.
 
-Ultimately, the amount of tweets obtained should be around 10,000 to get a true sample of the most popular topics containing our tagword.
+Ultimately, the amount of tweets obtained should be around 2,000 to get a true sample of the most popular topics containing our tagword.
 
 ## Methodology:
 A virtual machine running Ubuntu 16.0.4 was used, along withPython 3.5.2, which comes installed on the VM machine.  Jupyter notebook was also utilized in creating python scripts.
