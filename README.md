@@ -335,7 +335,7 @@ Not bad!!  With a little more tweaking and using a more powerful natural languag
 
 # Conclusion
 
-Sentiment analysis is quite interesting and if time allowed, further analysis would have been included.  Future anaylise would be to include a regression model try and understand what, if any, relationship exists between:
+Sentiment analysis is quite interesting and if time allowed, further analysis would have been included.  Future analysis would be to include a regression model try and understand what, if any, relationship exists between:
 
            * Tweets and geographic location.
            * Which tweets, negative or positive, occur at which time of day?
