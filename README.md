@@ -46,7 +46,7 @@ The following packages were used and installed via pip3:
 ### Tools and libraries
 
 * Python
-    * pyspark: 
+    * pyspark: https://spark.apache.org/docs/0.9.0/python-programming-guide.html
     * pyspark.streaming import Streaming Context
                               Main entry point for Spark Streaming functionality.
     * pyspark.sql import SQLContext 
@@ -62,8 +62,8 @@ The following packages were used and installed via pip3:
     * socket - Enables a line of communication from twitter to our local machine.
     * json - The json library can parse JSON from strings or files. The library parses JSON into a Python dictionary or list. 
              It can also convert Python dictionaries or lists into JSON strings.
-
-    * pandas -
+    * pandas - pandas is an open source, freely licensed library providing high-performance, 
+               easy-to-use data structures and data analysis tools for the Python programming language.
     * textblob - Sentiment analysis
 
 In order to run the .py and .ipynb scripts, two terminal windows are needed.  
