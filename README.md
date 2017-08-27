@@ -1,8 +1,8 @@
 # Live streaming twitter data, including sentiment analysis using tweepy, pyspark, and textblob.
 ## Data Practicum II
-Spark is one of the latest technologies being used to quickly and easily handle Big Data. It is an open source project on Apache. It was first released in February 2013 and has increased in popularity due to its ease of use and speed.  Created at the AMPLab at UC Berkeley and is a flexible alternative to MapReduce Spark that can use data stored in a various formats such as: Cassandra, Amazon Web Services, S3, HDFS, and more.
+Spark is one of the latest technologies being used to quickly and easily handle Big Data. It is an open source project on Apache. It was first released in February 2013 and has increased in popularity due to its ease of use and speed.  Created at the AMPLab at UC Berkeley and is a flexible alternative to MapReduce Spark that can use data stored in various formats such as Cassandra, Amazon Web Services, S3, HDFS, and more.
 
-Spark is well known Streaming Capabilities and if you are probably familiar with some of these concepts already, you may find it more useful to jump straight to the official documentation here:
+Spark is well-known Streaming Capabilities, and if you are probably familiar with some of these concepts already, you may find it more useful to jump straight to the official documentation here:
 
 http://spark.apache.org/docs/latest/streaming-programming-guide.html#spark-streaming-programming-guide
 
@@ -24,23 +24,22 @@ Internally, it works as follows. Spark Streaming collects current input data str
 
 ## Project:
 This project will consist of multiple phases. 
-The first phase of our project will be using Python 3.6 to set up a live data streaming pipeline with Twitter using the tweepy package and Spark using the pyspark library. The tag word we will use is 'Donald Trump'. Our President is on the news a lot and it would be interesting to see what hash tag topics are be attached to tweets that contain his name
+The first phase of our project will be using Python 3.6 to set up a live data streaming pipeline with Twitter using the tweepy package and Spark using the pyspark library. The tag word we will use is 'Donald Trump.' Our President is in the news a lot, and it would be interesting to see what hash tag topics are be attached to tweets that contain his name
 
-The second phase will be to analyze the top 10 tweets. Once a specified number of tweets (2,000+, approx. 10 minutes) have been obtained, we will analyze each individual tweet and will then rank the top 10 most popular hash tag topics using the hash tag marker.
+The second phase will be to analyze the top 10 tweets. Once a specified number of tweets (2,000+, approx. 10 minutes) have been obtained, we will analyze each tweet and will then rank the top 10 most popular hash tag topics using the hash tag marker.
 
-A dashboard will be displayed, which will consist of a bar plot using the matplotlib and seaborn library. Our dashboard will be updated in real time as the tweets are collected and the top ten 'hash tag' topics will be displayed in a bar plot. Each item in the top ten list will be displayed in a different color. The x-axis will display the total count and the y-axis will show the hash tag topic.
+A dashboard will be displayed, which will consist of a bar plot using the matplotlib and seaborn library. Our dashboard will be updated in real time as the tweets are collected and the top ten 'hash tag' topics will be displayed in a bar plot. Each item in the top ten list will be shown in a different color. The x-axis will show the total count and the y-axis will show the hash tag topic.
 
-The third part of the project will be to capture a significant number of tweets (2,000+) and complete a sentiment analysis that will include a polarity and subjectivity score using thr python package textblob.  
+The third part of the project will be to capture a significant number of tweets (2,000+) and complete a sentiment analysis that will include a polarity and subjectivity score using the python package textblob.  
 
 The final phase will be to implement the machine learning algorithm, Naïve Bayes,  to see how well we can classify unseen tweets correctly. 
 
 ## Data:
-The data will consist of creating a pipeline to live stream tweets that contain the tagword "Donald Trump". The pipeline will continue to live stream tweets to adequately display the ten most popular.
-
-Ultimately, the amount of tweets obtained should be around 2,000 to get a true sample of the most popular topics containing our tagword.
+The data will consist of creating a pipeline to live stream tweets that contain the tag word "Donald Trump." The pipeline will continue to live stream tweets to display the ten most popular adequately.
+Ultimately, the number of tweets obtained should be around 2,000 to get an accurate sample of the most popular topics containing our tag word.
 
 ## Methodology:
-A virtual machine running Ubuntu 16.0.4 was used, along withPython 3.5.2, which comes installed on the VM machine.  Jupyter notebook was also utilized in creating python scripts.
+A virtual machine running Ubuntu 16.0.4 was used, along with Python 3.5.2, which comes installed on the VM machine.  Jupyter notebook was also utilized in creating python scripts.
 The following packages were used and installed via pip3:
 
 ### Tools and libraries
@@ -53,20 +52,20 @@ The following packages were used and installed via pip3:
                               Main entry point for Data Frame and SQL functionality.
     * pyspark.sql.functions import desc
                               SQL function to allow listing in descending order.
-    * matplotlib - Create a bar plot to display the top ten hash tag topics
-    * seaborn - Provides an interface with matlplotlib to create interactive graphs
-    * IPython - Allows for the display of graphs in the jupyter notebook
+    * matplotlib - Create a bar plot to display the top ten hash tag topics.
+    * seaborn - Provides an interface with matlplotlib to create interactive graphs.
+    * IPython - Allows for the display of graphs in the jupyter notebook.
     * time - Set up a time delay to capture tweets every 3 seconds and update the dashboard every 10 seconds.  
-             The 3 second delay will prevent a rate limit error from tweeters API. https://dev.twitter.com/rest/public/rate-limiting
+             The 3-second delay will prevent a rate limit error from tweeters API. https://dev.twitter.com/rest/public/rate-limiting
     * tweepy - Allows python to connect to the twitter API.
     * socket - Enables a line of communication from twitter to our local machine.
-    * json - The json library can parse JSON from strings or files. The library parses JSON into a Python dictionary or list. 
-             It can also convert Python dictionaries or lists into JSON strings.
+    * json - The json library can decipher JSON from strings or files. The library can render JSON into a Python dictionary or list. 
+             It can also adapt Python dictionaries or lists into JSON strings.
     * pandas - pandas is an open source, freely licensed library providing high-performance, 
                easy-to-use data structures and data analysis tools for the Python programming language.
-    * textblob - Sentiment analysis
+    * textblob - Sentiment analysis and Niave Bayes classifier.
 
-In order to run the .py and .ipynb scripts, two terminal windows are needed.  
+To run the .py and .ipynb scripts, two terminal windows are needed.  
 
 # PHASE I
 ### Step 1
@@ -89,8 +88,8 @@ Ubuntu version 16.0.4 was created.
 ## TWEETREAD.PY         
 ### Step 4: TweetRead.py
 
-A .py script was created called TweetRead.  From the tweepy package we install 'OAuthHandler'Stream to handle the authorization credientials that we will enter.  Also, from tweepy we will import 'Stream' and 'StreamHandler' to allow us to log and capture tweets.
-The credentials that we obtained fromm the twitter api will also be entered and saved as objects.  
+A .py script was created called TweetRead.  From the tweepy package, we install 'OAuthHandler'Stream to handle the authorization credentials that we will enter.  Also, from tweepy, we will import 'Stream' and 'StreamHandler' to allow us to log and capture tweets.
+The credentials that we obtained from the twitter API will also be entered and saved as objects.  
 
          from tweepy import OAuthHandler
          from tweepy import Stream
@@ -102,7 +101,7 @@ The credentials that we obtained fromm the twitter api will also be entered and 
          access_token ='<ACCESS_TOKEN>'
          access_secret='<ACCESS_SECRET>'
          
-Next we create a class called tweetListener that will listen for to tweets.
+Next, we create a class called tweetListener that will listen for to tweets.
 
          class TweetsListener(StreamListener): # Create a class that will listen to tweets from Streamlistener
 
@@ -118,7 +117,7 @@ We will now set some user defined functions that will be used to handle the data
                 print("Error on_data: %s" % str(e))
             return True
             
-...and to handle errors that are returned:
+...and to handle errors that are returned.
 
          def on_error(self, status): # If an error occurs
              print(status)
@@ -128,7 +127,7 @@ Next, we will create a client connection and send the tweets to the local IP add
 
 Our tag word can be edited to pull all tweets that contain it.
 
-One issue that does occur when running the program multiple times is that an error may occur indicating the 'address is invalid' or 'socket in use'.  At this point, to correct the issue, a new socket number = original socket - 1, must be entered.
+One issue that does occur when running the program multiple times is that an error may occur indicating the 'address is invalid' or 'socket in use.'  At this point, to correct the issue, a new socket number = original socket - 1, must be entered.
 
          def sendData(c_socket): # Send the data to client socket, setting up connection
              auth = OAuthHandler(consumer_key, consumer_secret)
@@ -167,7 +166,7 @@ We will initiate the findspark script to locate pyspark from our original direct
                import pyspark
                
 We must first load the necessary parts of pyspark that will allow us to create a SparkContext, which is the initial state to allow Spark functionality.
-Along with that we will iniate Spark Streaming, which will allow us to collect live streaming data.  Finally, we will initiate pyspark.sql to allow SQL queries when we are retrieving the tweets for visualization.
+Along with that, we will initiate Spark Streaming, which will allow us to collect live streaming data.  Finally, we will initiate pyspark.sql to allow SQL queries when we are retrieving the tweets for visualization.
 
                from pyspark import SparkContext
                from pyspark.streaming import StreamingContext
@@ -176,7 +175,7 @@ Along with that we will iniate Spark Streaming, which will allow us to collect l
                
 ### Step 2
 
-Initiate the SparkContext funtionality.  When doing so, we can only initiate once or we must restart our kernel to do so a second time.
+Initiate the SparkContext functionality.  When doing so, we can only initiate once or we must restart our kernel to do so a second time.
 
                sc = SparkContext()
                
@@ -184,7 +183,7 @@ Initiate the SparkContext funtionality.  When doing so, we can only initiate onc
 
 The SparkStreaming object will be created and we will set the update argument to 10 seconds.  This translate to our bar plot being updated every 10 seconds.
 Our SQLContext object will be created with the using the argument (sc).  This will allow for SQL queries on the data.
-A socketStream object will be created using our local IP address and the socket we used in the TweetRead.py script.  Make sure these variables are the same in both the TweetRead and Pyspark script.  
+A socketStream object will be created using our local IP address and the socket we utilized in the TweetRead.py script.  Make sure these variables are the same in both the TweetRead and Pyspark script.  
 
                ssc = StreamingContext(sc, 10 )
                sqlContext = SQLContext(sc)
@@ -193,7 +192,7 @@ A socketStream object will be created using our local IP address and the socket 
                
 ### Step 4
 
-Create a tuple that will be made into a list, check for hashtags, sets everything to lowercase, reduces by the predetermined key, stores the object as a tweet object, stores the tweets in descending order (since we are gioing to retrieve the top ten tweets) and registers every ten tweets to a table for later referencing.
+First create a tuple that will be made into a list.  Second, check for hashtags and sets everything to lowercase,which reduces by the predetermined key, Finally, it stores the object as a tweet object, stores the tweets in descending order (since we are going to retrieve the top ten tweets) and registers every ten tweets to a table for later referencing.
             
                ( lines.flatMap( lambda text: text.split( " " ) ) 
                   .filter( lambda word: word.lower().startswith("#") ) 
@@ -205,16 +204,16 @@ Create a tuple that will be made into a list, check for hashtags, sets everythin
 
 ### Step 5
 
-At this point open a second terminal window and go the directory that contains the TweetRead.py file and type:
+Here, we will open a second terminal window and go the directory that contains the TweetRead.py file and type:
 
                   python3 TweetRead.py > tweet_data2.txt
 
 This will start listening on the defined port and output the collected tweets to a text file called tweet_data.txt.
-Once TweetRead.py is started enter the next command in the Jupyter notebook to start the SparkContext session.
+Once TweetRead.py is started, enter the next command in the Jupyter notebook to start the SparkContext session.
 
                   ssc.start() 
                   
-At this point tweets are being read and collected into the output file .
+At this point tweets are being read and collected into the output file.
 
 ### Step 6
 
@@ -228,8 +227,8 @@ Here we will enable the ability to display the visualization in the jupyter note
                   
  ### Step 7
  
-Here we will set the time to 3 seconds before we get are first update.  The top ten tweets object will be created using sql.context and a dataframe will be created using pandas.
-The next graph clear the previous, if one exists and will set the display parameters using seaborn, which will include our x and y axis, and finally display the graph.
+Here we will set the time to 3 seconds before we get our first update.  The top ten tweets object will be created using sql.context and a data frame will be created using pandas.
+The next graph clear the previous, if one exists and will set the display parameters using seaborn, which will include our x and y axis, and finally show the graph.
 
                   count = 0
                   while count < 10:
@@ -249,12 +248,12 @@ https://user-images.githubusercontent.com/7649609/29252628-0be38f4a-8028-11e7-89
 ### Step 1
 
 Our final phase of the project will be to run a sentiment analysis on the output file we created that holds all of our tweets.
-Cleaning the tweet data was done so using Microsoft Excel.  Hashtags (#), http(s) address' were removed.  Any Retweeted(RT) indicator was removed from, along with any duplicated tweets.  Another point of contention was making sure blank rows were removed as this proved to be troublesome with 'IndexOutofRange' errors.
+Cleaning the tweet data was done so using Microsoft Excel.  Hashtags (#), HTTP(s) address' were removed.  Any Retweeted(RT) indicator was removed from, along with any duplicated tweets.  Another point of contention was making sure blank rows were removed as this proved to be troublesome with 'IndexOutofRange' errors.
 
 Our sentiment analysis will display
 
     Polarity - a measure of the negativity, the neutralness, or the positivity of the text
-    Classification - either pos or neg indicating if the text is positive or negative
+    Classification - either positive or negative demonstrating if the text is positive or negativeitive
 
 To calculate the overall sentiment, we look at the polarity score:
 
@@ -264,15 +263,15 @@ To calculate the overall sentiment, we look at the polarity score:
 
      
 The output data collected was imported into Microsoft Excel for data cleaning.
-The collected tweets contained various marker strings that needed to be removed befor we could run the sentiment analyzer.
+The collected tweets contained various marker strings that needed to be removed before we could run the sentiment analyzer.
 This was accomplished by using the 'Find and Replace' function in Excel.  
 
-Examples of what is will be removed and a screenshot link are listed below.
+Examples of what will be removed and a screenshot link are listed below.
 
-         *  'b', which was at the beginning of each tweet.
+         *  'b,' which was at the beginning of each tweet.
          *  RT, which stood for retweeted was removed.
          *  Removal of the @ sign from each tweet.
-         *  http and https, along with any url address that started with '://'.
+         *  http and https, along with any URL address that started with '://.'
          *  Or any other '/' followed by text.
          *  Remove all punctuation
 
@@ -295,7 +294,7 @@ With the data cleaned and ready for sentiment analysis using textblob the follow
                         print (sentence)
                         print (blob.sentiment.polarity, blob.sentiment.subjectivity)
                         
-The above code borrowed from https://stackoverflow.com/questions/35559199/textblob-sentiment-analysis-on-a-csv-file with some modifcation and syntax error corrections.                        
+The above code borrowed from https://stackoverflow.com/questions/35559199/textblob-sentiment-analysis-on-a-csv-file with some modification and syntax error corrections.                        
 
 We now have a file that contains our tweet data along a polarity and subjectivity score attached to each.                    
 
@@ -303,8 +302,8 @@ https://user-images.githubusercontent.com/7649609/29252892-f677c2c0-802c-11e7-91
 
 # PHASE IV
 ## Naive Bayes
-The textblob package will be used once again for our text classification. Textblob will allow us to incorporate a naive bayes classifier very simply and efficiently.
-Since we have our data set cleaned and labled all we have to do is split the data into train and test sets using a 70/30 split.
+The textblob package will be used once again for our text classification. Textblob will allow us to incorporate a Naive Bayes classifier very directly and efficiently.
+Since we have our data set cleaned and labeled all we have to do is split the data into train and test sets using a 70/30 split.
                      
                      import pandas as pd
                      import numpy as np
@@ -323,7 +322,7 @@ Since we have our data set cleaned and labled all we have to do is split the dat
                      
                      cl.accuracy(test) 
                      
- We obtained an .67 accuracy rate with a very simple classification piece of code that was provided for us.
+ We obtained a .67 accuracy rate with a very effortless classification piece of code that was provided for us.
  Getting the top 5 most relevant words is relatively simple:
 
                      cl.show_informative_features(5)
@@ -331,16 +330,16 @@ https://user-images.githubusercontent.com/7649609/29696424-2cd8f9a6-8906-11e7-9d
 
 Here we can see the words 'is' and 'Great' occur five times more in positive tweets than negative.
 
-Not bad!!  With a little more tweaking and using a more powerful natural language classification algorithm we could probably obtain a very respectable accuracy rate.
+Not bad!!  With a little more tweaking and using a more robust natural language classification algorithm, we could probably obtain a very respectable accuracy rate.
 
 # Conclusion
 
-Sentiment analysis is quite interesting and if time allowed, further analysis would have been included.  Future analysis would be to include a regression model try and understand what, if any, relationship exists between:
+Sentiment analysis is interesting and if time allowed, further analysis would have been included.  A future study would be to include a regression model try and understand what, if any, relationship exists between:
 
            * Tweets and geographic location.
            * Which tweets, negative or positive, occur at which time of day?
           
-The project was an evolution in learning for me, which allowed me understand the live streaming process and the powerful tools that are available to do so, along with gaining knowledge of the textblob package.
+The project was an evolution in learning for me, which allowed me to understand the live streaming process and the powerful tools that are available to do so, along with gaining knowledge of the textblob package.
 Thank you for your time and patience!
            
 
