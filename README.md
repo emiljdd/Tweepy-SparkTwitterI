@@ -47,15 +47,16 @@ The following packages were used and installed via pip3:
 
 * Python
     * pyspark - pyspark.streaming import Streaming Context
-                          Main entry point for Spark Streaming functionality.
-                     pyspark.sql import SQLContext 
-                          Main entry point for Data Frame and SQL functionality.
-                     pyspark.sql.functions import desc
-                          SQL function to allow listing in descending order.
+                     Main entry point for Spark Streaming functionality.
+                pyspark.sql import SQLContext 
+                     Main entry point for Data Frame and SQL functionality.
+                pyspark.sql.functions import desc
+                     SQL function to allow listing in descending order.
     * matplotlib - Create a bar plot to display the top ten hash tag topics
     * seaborn - Provides an interface with matlplotlib to create interactive graphs
     * IPython - Allows for the display of graphs in the jupyter notebook
-    * time - Small, minimalistic, Python library for dealing with time conversions between universal time and arbitrary time zones
+    * time - Set up a time delay to capture tweets every 3 seconds and update the dashboard every 10 seconds.  
+             The 3 second delay will prevent a rate limit error from tweeters API. https://dev.twitter.com/rest/public/rate-limiting
     * tweepy - Allows python to connect to the twitter API.
     * socket - Enables a line of communication from twitter to our local machine.
     * json - The json library can parse JSON from strings or files. The library parses JSON into a Python dictionary or list. 
@@ -138,7 +139,7 @@ One issue that does occur when running the program multiple times is that an err
          if __name__ == "__main__":
              s = socket.socket()         # Create a socket object
              host = "127.0.0.1"          # Get local machine name
-             port = 9992                 # Reserve a port for your connection service.
+             port = "Any open port"      # Reserve a port for your connection service.
              s.bind((host, port))        # Bind to the port, create tuple
 
              print("Listening on port: %s" % str(port))
@@ -182,12 +183,12 @@ Initiate the SparkContext funtionality.  When doing so, we can only initiate onc
 
 The SparkStreaming object will be created and we will set the update argument to 10 seconds.  This translate to our bar plot being updated every 10 seconds.
 Our SQLContext object will be created with the using the argument (sc).  This will allow for SQL queries on the data.
-A socketStream object will be created using our local IP address and the socket we used in the TweetRead.py script.  Make sure these variables are the same in both scripts.
+A socketStream object will be created using our local IP address and the socket we used in the TweetRead.py script.  Make sure these variables are the same in both the TweetRead and Pyspark script.  
 
                ssc = StreamingContext(sc, 10 )
                sqlContext = SQLContext(sc)
                
-               socket_stream = ssc.socketTextStream("127.0.0.1", 9991)
+               socket_stream = ssc.socketTextStream("127.0.0.1", "Enter the same port # as in the TweetRead.py script")
                
 ### Step 4
 
