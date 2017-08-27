@@ -47,11 +47,11 @@ The following packages were used and installed via pip3:
 
 * Python
     * pyspark - pyspark.streaming import Streaming Context
-                           Main entry point for Spark Streaming functionality.
-                     pyspark.sql import SQLContext 
-                           Main entry point for Data Frame and SQL functionality.
-                     pyspark.sql.functions import desc
-                           SQL function to allow listing in descending order.
+                              Main entry point for Spark Streaming functionality.
+                        pyspark.sql import SQLContext 
+                              Main entry point for Data Frame and SQL functionality.
+                        pyspark.sql.functions import desc
+                              SQL function to allow listing in descending order.
     * matplotlib - Create a bar plot to display the top ten hash tag topics
     * seaborn - Provides an interface with matlplotlib to create interactive graphs
     * IPython - Allows for the display of graphs in the jupyter notebook
